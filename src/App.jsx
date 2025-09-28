@@ -3,6 +3,7 @@ import { Suspense, lazy, useEffect } from 'react'
 import LoadingFallback from './components/common/LoadingFallback'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import FloatingQuoteButton from './components/common/FloatingQuoteButton'
 
 // Register GSAP plugin once
 gsap.registerPlugin(ScrollTrigger)
@@ -46,6 +47,9 @@ const App = () => {
           <Route path='/affiliate-program' element={<AffiliateProgram />} />
         </Routes>
       </Suspense>
+      
+      {/* Global floating quote button */}
+      <FloatingQuoteButton />
     </div>
   )
 }
